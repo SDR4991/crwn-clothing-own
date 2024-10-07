@@ -1,4 +1,4 @@
-import './category.styles.scss';
+import { CategoryContainer,CategoryTitle } from './category.styles';
 
 import { useContext,useState,useEffect, Fragment } from 'react';
 
@@ -20,13 +20,13 @@ const Category = () =>{
     return (
         <Fragment>
             
-            <h2 className='category-title'>{category}</h2>
+            <CategoryTitle>{category}</CategoryTitle>
 
-            <div className='category-container'>
+            <CategoryContainer>
                 {
                 products && products.map((product)=> <ProductCard key={product.id} product={product}/>)
                 }
-            </div>
+            </CategoryContainer>
             
         </Fragment>
 
